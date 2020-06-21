@@ -1,0 +1,41 @@
+GET http://localhost:8099/products
+Accept: application/json
+
+
+####
+
+
+POST http://localhost:8099/products
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "uuu new Product",
+  "description": "super product",
+  "price": 123456.78
+}
+
+
+####
+
+POST http://localhost:8099/products
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "new Product 2",
+  "description": "super product",
+  "price": 123456.78
+}
+
+####
+
+POST http://localhost:8099/products/byName
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "new"
+}
+
+

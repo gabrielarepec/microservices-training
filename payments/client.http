@@ -1,0 +1,67 @@
+GET http://localhost:8081/payments
+Accept: application/json
+
+
+####
+
+
+POST http://localhost:8081/payments
+Accept: application/json
+Content-Type: application/json
+
+{
+  "amount": 1000,
+  "creditCard": {
+    "number": "1223456789",
+    "cvv": "123",
+    "expirationTime": "2029-12-12T12:00:00"
+  }
+}
+
+####
+
+GET http://localhost:8080/api/payments
+Accept: application/json
+
+
+####
+
+
+POST http://localhost:8080/api/payments
+Accept: application/json
+Content-Type: application/json
+
+{
+  "amount": 1000,
+  "creditCard": {
+    "number": "1223456789",
+    "cvv": "123",
+    "expirationTime": "2029-12-12T12:00:00"
+  }
+}
+
+#### should throw validation exception <-
+POST http://localhost:8080/api/orders
+Accept: application/json
+Content-Type: application/json
+
+{
+  "products": []
+}
+
+###
+POST http://localhost:8080/api/orders
+Accept: application/json
+Content-Type: application/json
+
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Microservices in practice"
+    }
+  ]
+}
+
+###
+

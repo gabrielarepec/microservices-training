@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: gateway #odpowiada nazwie pliku konfiguracyjnego
+  cloud:
+    config:
+      uri: http://localhost:8888  #domyslnie tak jest, mozna by nie pisac tego
+      #label: master

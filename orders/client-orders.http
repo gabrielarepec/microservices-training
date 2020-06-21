@@ -1,0 +1,25 @@
+#### should throw validation exception <-
+POST http://localhost:8080/api/orders
+Accept: application/json
+Content-Type: application/json
+
+{
+  "products": []
+}
+
+###
+POST http://localhost:8080/api/orders
+Accept: application/json
+Content-Type: application/json
+
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Microservices in practice"
+    }
+  ]
+}
+
+###
+

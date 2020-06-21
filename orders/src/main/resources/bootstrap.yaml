@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: orders-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+      #label: master
+  #messages:
+    #basename: messages  #aktualnie jest tak samo ustawione, nawet jak tego nie użyjemy bo to jest wartość domyślna (dla MessageSource)
