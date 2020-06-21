@@ -41,10 +41,9 @@ public class ProductsController implements Products {
 	}
 
 	@Override
-	public List<ProductTo> getAllProductsWithPaging(Pageable pageable, @RequestParam String field) {
-		log.info("getAllProductsWithPaging : called with params : {} , {} ", pageable, field);
-		return this.productsMapper.toPaymentTOs(this.productsService.getAllProductsWithPaging(
-				PageRequest.of(pageable.getPageNumber(), pageable.getPageSize(), Sort.by(field).ascending())));
+	public List<ProductTo> getAllProductsWithPaging(Pageable pageable) {
+		log.info("getAllProductsWithPaging : called with params : {} ", pageable);
+		return this.productsMapper.toPaymentTOs(this.productsService.getAllProductsWithPaging(pageable));
 	}
 
 }

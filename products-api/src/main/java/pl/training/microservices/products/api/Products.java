@@ -24,6 +24,6 @@ public interface Products {
 	public List<ProductTo> getAllProductsWithNameContains(@RequestParam String name);
 
 	@GetMapping("/pageable")
-	public List<ProductTo> getAllProductsWithPaging(Pageable pageable, @RequestParam String field);
+	public List<ProductTo> getAllProductsWithPaging(Pageable pageable);
 
 }
